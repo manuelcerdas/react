@@ -28,15 +28,15 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
-      <div className="expenses">
+      <Card className="expenses">
       {
         expenses.map(expense => (
-          <Card>
+          <Card key={expense.id}>
             <ExpenseComponent title={expense.title} date={expense.date} amount={expense.amount} />
           </Card>
         ))
       }      
-      </div>
+      </Card>
     </div>
     
   );

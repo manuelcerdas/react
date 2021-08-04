@@ -1,8 +1,12 @@
 import "./Card.css"
 
 function Card (props) {
+    var classes = "card ";
+    if (props.className != null) {
+        classes += props.className
+    }    
     return (
-        <div className="card">{props.children}</div>
+        <div className={classes}>{props.children}</div>
     );
 }
 
